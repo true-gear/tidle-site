@@ -92,7 +92,7 @@ section { padding-block: clamp(64px, 9vw, 112px) }
 .toggle { display: inline-flex; border: 2px solid var(--char) }
 .toggle button { font: 700 13px var(--display); font-stretch: 112%; letter-spacing: .08em; text-transform: uppercase; padding: 12px 18px; border: 0; background: transparent; color: var(--char); cursor: pointer }
 .toggle button[aria-pressed="true"] { background: var(--char); color: var(--paper) }
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 36px }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 36px }
 .card { background: #FAF7F1; border: 1px solid var(--rule); display: flex; flex-direction: column; min-width: 0 }
 .card .art { aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; background: var(--sand); overflow: hidden }
 .card .art svg { width: 78%; height: auto }
@@ -103,7 +103,8 @@ section { padding-block: clamp(64px, 9vw, 112px) }
 .card li { display: flex; gap: 10px } .card li::before { content: ""; width: 8px; height: 8px; margin-top: 9px; background: var(--honey); flex: none }
 .card .btn { margin-top: auto; text-align: center }
 .card .for { font-size: 15px; color: var(--muted); margin: 0 }
-@media (max-width: 900px) { .cards { grid-template-columns: 1fr; max-width: 520px } }
+@media (max-width: 1080px) { .cards { grid-template-columns: repeat(2, 1fr) } }
+@media (max-width: 620px) { .cards { grid-template-columns: 1fr } }
 .deck-grain { fill: url(#grain) }
 .ed-note { margin-top: 18px; font-size: 15px; color: var(--muted) }
 
@@ -188,43 +189,49 @@ footer .logo { color: var(--paper) } footer .logo svg { height: 30px }
     <div class="range-head">
       <div>
         <p class="eyebrow">The range</p>
-        <h2>Pick your length</h2>
-      </div>
-      <div class="toggle" role="group" aria-label="Edition">
-        <button type="button" id="ed-grain" aria-pressed="true" data-ed="grain">Grain</button>
-        <button type="button" id="ed-core" aria-pressed="false" data-ed="core">Core</button>
+        <h2>Four docks. One standard.</h2>
       </div>
     </div>
-    <p class="ed-note" id="ed-note">Grain edition: wood-look deck with twin non-slip strips and tan corner panels.</p>
+    <p class="ed-note"><strong>Grain</strong> is the premium edition: wood-look deck, twin non-slip strips, tan corner panels. <strong>Core</strong> is the no-fuss edition: grey drop-stitch top, black side tubes. Same 20cm build and three-year warranty on both.</p>
     <div class="cards">
       <article class="card">
-        <div class="art"><svg viewBox="0 0 300 200" aria-hidden="true"><g class="deck"><rect x="40" y="40" width="220" height="120" rx="14" class="deck-top"/><rect x="62" y="62" width="176" height="28" rx="3" class="strip"/><rect x="62" y="110" width="176" height="28" rx="3" class="strip"/></g></svg></div>
-        <div class="body">
-          <h3 class="name">Launch 3</h3>
-          <p class="ed" data-ed-label>Grain edition</p>
-          <p class="for">For one boat and a quick launch at the ramp or bank.</p>
-          <ul><li>3 m long</li><li>20 cm drop stitch</li><li>Hand pump, repair kit, carry bag</li></ul>
-          <a class="btn btn-honey" href="https://truegear.com.au/search?q=tidle%20launch%203">Shop Launch 3</a>
-        </div>
-      </article>
-      <article class="card">
-        <div class="art"><svg viewBox="0 0 300 200" aria-hidden="true"><g class="deck"><rect x="22" y="48" width="256" height="104" rx="14" class="deck-top"/><rect x="42" y="66" width="216" height="24" rx="3" class="strip"/><rect x="42" y="110" width="216" height="24" rx="3" class="strip"/></g></svg></div>
-        <div class="body">
-          <h3 class="name">Launch 4</h3>
-          <p class="ed" data-ed-label>Grain edition</p>
-          <p class="for">More room to load up, tie off and sit with your feet in.</p>
-          <ul><li>4 m long</li><li>20 cm drop stitch</li><li>Hand pump, repair kit, carry bag</li></ul>
-          <a class="btn btn-honey" href="https://truegear.com.au/search?q=tidle%20launch%204">Shop Launch 4</a>
-        </div>
-      </article>
-      <article class="card">
-        <div class="art"><svg viewBox="0 0 300 200" aria-hidden="true"><g class="deck"><path d="M134 186 V108 L52 30 L78 16 L150 86 L222 16 L248 30 L166 108 V186 Z" class="deck-top" stroke-linejoin="round"/><path d="M144 176 V108 L72 38 L80 32 L150 98 L220 32 L228 38 L156 108 V176 Z" class="strip"/></g></svg></div>
+        <div class="art" style="background:#CDBA9E"><svg viewBox="0 0 300 200" aria-hidden="true"><path d="M134 186 V108 L52 30 L78 16 L150 86 L222 16 L248 30 L166 108 V186 Z" fill="url(#grain)" stroke="#8E7B6C" stroke-width="6" stroke-linejoin="round"/><path d="M144 176 V108 L72 38 L80 32 L150 98 L220 32 L228 38 L156 108 V176 Z" fill="#CDBA9E"/></svg></div>
         <div class="body">
           <h3 class="name">Harbour Y 8.5</h3>
-          <p class="ed" data-ed-label>Grain edition</p>
-          <p class="for">A berth on each side of the Y. The full setup for two boats or jet skis.</p>
-          <ul><li>8.5 m Y-shape</li><li>20 cm drop stitch</li><li>Electric pump, repair kit, carry bag</li></ul>
-          <a class="btn btn-honey" href="https://truegear.com.au/search?q=tidle%20harbour">Shop Harbour Y</a>
+          <p class="ed">Grain edition</p>
+          <p class="for">The full setup. A berth on each side of the Y for two boats or jet skis, on the wood-look non-slip deck.</p>
+          <ul><li>8.5 m Y-shape</li><li>Wood-look deck, twin non-slip strips</li><li>Electric pump, repair kit, carry bag</li><li>20 cm drop stitch, 3-year warranty</li></ul>
+          <a class="btn btn-honey" href="https://truegear.com.au/search?q=tidle%20harbour%20y%208.5%20grain">Shop Harbour Y 8.5 Grain</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="art" style="background:#E4DDD1"><svg viewBox="0 0 300 200" aria-hidden="true"><path d="M134 186 V108 L52 30 L78 16 L150 86 L222 16 L248 30 L166 108 V186 Z" fill="#9A9C9A" stroke="#151515" stroke-width="10" stroke-linejoin="round"/><path d="M144 176 V108 L72 38 L80 32 L150 98 L220 32 L228 38 L156 108 V176 Z" fill="#8A8C8A"/></svg></div>
+        <div class="body">
+          <h3 class="name">Harbour Y 8.5</h3>
+          <p class="ed">Core edition</p>
+          <p class="for">The same Y-shape berth for two, with the tough grey drop-stitch top and black side tubes.</p>
+          <ul><li>8.5 m Y-shape</li><li>Grey top, black side tubes</li><li>Electric pump, repair kit, carry bag</li><li>20 cm drop stitch, 3-year warranty</li></ul>
+          <a class="btn btn-honey" href="https://truegear.com.au/search?q=tidle%20harbour%20y%208.5%20core">Shop Harbour Y 8.5 Core</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="art" style="background:#CDBA9E"><svg viewBox="0 0 300 200" aria-hidden="true"><rect x="22" y="48" width="256" height="104" rx="14" fill="url(#grain)" stroke="#8E7B6C" stroke-width="6"/><rect x="42" y="66" width="216" height="24" rx="3" fill="#CDBA9E"/><rect x="42" y="110" width="216" height="24" rx="3" fill="#CDBA9E"/></svg></div>
+        <div class="body">
+          <h3 class="name">Launch 4</h3>
+          <p class="ed">Grain edition</p>
+          <p class="for">Room to load up, tie off and sit with your feet in, on the wood-look non-slip deck.</p>
+          <ul><li>4 m long</li><li>Wood-look deck, twin non-slip strips</li><li>Hand pump, repair kit, carry bag</li><li>20 cm drop stitch, 3-year warranty</li></ul>
+          <a class="btn btn-honey" href="https://truegear.com.au/search?q=tidle%20launch%204%20grain">Shop Launch 4 Grain</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="art" style="background:#E4DDD1"><svg viewBox="0 0 300 200" aria-hidden="true"><rect x="40" y="40" width="220" height="120" rx="14" fill="#9A9C9A" stroke="#151515" stroke-width="10"/><rect x="62" y="62" width="176" height="28" rx="3" fill="#8A8C8A"/><rect x="62" y="110" width="176" height="28" rx="3" fill="#8A8C8A"/></svg></div>
+        <div class="body">
+          <h3 class="name">Launch 3</h3>
+          <p class="ed">Core edition</p>
+          <p class="for">One boat and a quick, dry launch at the ramp or bank. The simplest way into a Tidle.</p>
+          <ul><li>3 m long</li><li>Grey top, black side tubes</li><li>Hand pump, repair kit, carry bag</li><li>20 cm drop stitch, 3-year warranty</li></ul>
+          <a class="btn btn-honey" href="https://truegear.com.au/search?q=tidle%20launch%203%20core">Shop Launch 3 Core</a>
         </div>
       </article>
     </div>
@@ -291,7 +298,7 @@ footer .logo { color: var(--paper) } footer .logo svg { height: 30px }
     <p class="eyebrow">Questions</p>
     <h2>Before you buy</h2>
     <details style="margin-top:28px"><summary>What's the difference between Grain and Core?</summary><p>Grain is the premium edition: a wood-look deck with twin non-slip strips and tan corner panels. Core is the simpler edition: a grey drop-stitch top with black side tubes. Both are 20cm thick and carry the same three-year warranty.</p></details>
-    <details><summary>Which size do I need?</summary><p>The Launch 3 suits one boat at the bank or ramp. The Launch 4 gives you room to load up and sit. The Harbour Y 8.5 berths a boat or jet ski on each side of the Y, so it's the one for a full setup.</p></details>
+    <details><summary>Which size do I need?</summary><p>The Launch 3 Core suits one boat at the bank or ramp. The Launch 4 Grain gives you room to load up and sit. The Harbour Y 8.5 berths a boat or jet ski on each side of the Y, in Grain or Core, so it's the one for a full setup.</p></details>
     <details><summary>Where do I buy one?</summary><p>Tidle docks are sold through True Gear at truegear.com.au.</p></details>
     <details><summary>Who's behind Tidle?</summary><p>Tidle is an Australian brand run by Tim Jagger, who also runs True Gear. The docks are made by a specialist inflatable factory that builds for leading dock brands overseas.</p></details>
   </div>
@@ -305,23 +312,6 @@ footer .logo { color: var(--paper) } footer .logo svg { height: 30px }
   </div>
 </footer>
 
-<script>
-(function () {
-  var notes = { grain: "Grain edition: wood-look deck with twin non-slip strips and tan corner panels.", core: "Core edition: grey drop-stitch top with black side tubes. Same 20cm build and three-year warranty." };
-  function setEd(ed) {
-    document.querySelectorAll('.toggle button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.ed === ed ? 'true' : 'false'); });
-    document.getElementById('ed-note').textContent = notes[ed];
-    document.querySelectorAll('[data-ed-label]').forEach(function (e) { e.textContent = (ed === 'grain' ? 'Grain' : 'Core') + ' edition'; });
-    document.querySelectorAll('.card .art').forEach(function (a) {
-      a.style.background = ed === 'grain' ? '#CDBA9E' : '#E4DDD1';
-      a.querySelectorAll('.deck-top').forEach(function (t) { t.setAttribute('fill', ed === 'grain' ? 'url(#grain)' : '#9A9C9A'); t.setAttribute('stroke', ed === 'grain' ? '#8E7B6C' : '#151515'); t.setAttribute('stroke-width', ed === 'grain' ? '6' : '10'); });
-      a.querySelectorAll('.strip').forEach(function (s) { s.setAttribute('fill', ed === 'grain' ? '#CDBA9E' : '#8A8C8A'); });
-    });
-  }
-  document.querySelectorAll('.toggle button').forEach(function (b) { b.addEventListener('click', function () { setEd(b.dataset.ed); }); });
-  setEd('grain');
-})();
-</script>
 
 </body>
 </html>
