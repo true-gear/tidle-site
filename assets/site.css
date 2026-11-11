@@ -173,8 +173,8 @@ h2 { text-transform: none; font-weight: 800; font-stretch: 110%; letter-spacing:
 .card.dim { opacity: .55 }
 .card .tag { position: absolute; top: 12px; left: 12px; z-index: 2; background: var(--honey); color: var(--char); font: 700 12px var(--display); letter-spacing: .08em; text-transform: uppercase; padding: 6px 10px; display: none }
 .card.best .tag { display: block }
-.card .art { aspect-ratio: 5 / 4; display: flex; align-items: center; justify-content: center; overflow: hidden; text-decoration: none }
-.card .art svg { width: 76% } .card .art img { width: 100%; height: 100%; object-fit: cover; display: block }
+.card .art { aspect-ratio: 5 / 4; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #fff; text-decoration: none }
+.card .art svg { width: 76% } .card .art img { width: 100%; height: 100%; object-fit: contain; background: #fff; display: block }
 .card .body { padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1 }
 .card .name { font: 800 23px/1.05 var(--display); font-stretch: 118%; text-transform: uppercase; margin: 0 }
 .card .name a { text-decoration: none }
@@ -283,7 +283,7 @@ h2 { text-transform: none; font-weight: 800; font-stretch: 110%; letter-spacing:
 .buyrows { display: grid; gap: 14px; margin-top: 24px }
 .buyrow { display: grid; grid-template-columns: 140px 1fr auto; gap: 18px; align-items: center; border: 1px solid var(--rule); background: #FAF7F1; padding: 12px 16px 12px 12px }
 .buyrow .art, .buyrow .art.photo { aspect-ratio: 5 / 4; display: flex; align-items: center; justify-content: center; overflow: hidden }
-.buyrow .art svg { width: 84% } .buyrow .art img { width: 100%; height: 100%; object-fit: cover }
+.buyrow .art svg { width: 84% } .buyrow .art img { width: 100%; height: 100%; object-fit: contain; background: #fff }
 .buyrow b { font: 800 19px var(--display); font-stretch: 112%; text-transform: uppercase; display: block }
 .buyrow span { font-size: 14px; color: var(--muted) }
 .buyrow .acts { display: flex; flex-direction: column; gap: 8px; align-items: stretch }
